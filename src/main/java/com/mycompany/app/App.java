@@ -18,6 +18,7 @@ public class App
     private static String amount = "1";
     private static String executorAddress ="0x"; // change this with your metamask account
     private static String signerPK = "";
+    private static String nonce = "1";
 
 
     public static void main( String[] args ) throws IOException {
@@ -38,6 +39,7 @@ public class App
             jsonObject.getJSONObject("message").put("tokenAddress", tokenAddress);
             jsonObject.getJSONObject("message").put("amount", amount);
             jsonObject.getJSONObject("message").put("user", executorAddress);
+            jsonObject.getJSONObject("message").put("nonce", nonce);
 
             String modifiedJsonString = jsonObject.toString();
             return modifiedJsonString;
